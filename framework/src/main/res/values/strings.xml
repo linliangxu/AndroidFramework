@@ -1,0 +1,241 @@
+<resources>
+  <string name="app_name" translatable="false">会议议题表决移动终端</string>
+  <string name="app_name_en" translatable="false">CONFERENCE TOPIC VOTING MOBILE TERMINAL</string>
+
+  <string name="production_company" translatable="false">广东公信智能会议股份有限公司出品</string>
+  <string name="production_company_en" translatable="false">Guangdong Gongxin intelligent conference Co., Ltd</string>
+  <string name="copyright_technical_support_en" translatable="false">Copyright &amp; technical support</string>
+
+  <string name="enter_link_or_scan_qr_code" translatable="false">请输入会议链接地址，或扫描桌面二维码。</string>
+  <string name="enter_link_or_scan_qr_code_en" translatable="false">Please enter the conference link address, or scan the desktop QR code.</string>
+  
+  <string name="click_arbitrary_region_enter_meeting" translatable="false">点击任意区域，进入会议...</string>
+  <string name="no_dot" translatable="false">No.</string>
+  <string name="install" translatable="false">安装</string>
+  <string name="version" translatable="false">版本</string>
+  <string name="binding_device_code" translatable="false">请先绑定设备，设备码：%s</string>
+  <string name="no_device_info" translatable="false">无设备信息</string>
+
+  <string name="hello_welcome" translatable="false">你好，欢迎参与</string>
+  <string name="confirm_start_meeting" translatable="false">确认身份，开始会议</string>
+  <string name="confirm_enter_meeting" translatable="false">确认身份，进入会议</string>
+  <string name="enter_meeting" translatable="false">进入会议</string>
+  <string name="start_meeting" translatable="false">开始会议</string>
+  <string name="finish_meeting" translatable="false">结束会议</string>
+  <string name="restart_meeting" translatable="false">重开会议</string>
+  <string name="confirm_again_connect_last_meeting" translatable="false">确定要再次链接上次会议？</string>
+
+  <string name="are_you_sure_to_exit_the_application" translatable="false">确定退出应用吗?</string>
+  <string name="close_app_name" translatable="false">关闭“会议议题表决移动终端”应用</string>
+  <string name="close_application" translatable="false">关闭应用</string>
+
+  <string name="meeting_home" translatable="false">会议首页</string>
+  <string name="meeting_sign" translatable="false">会议签到</string>
+  <string name="topic_file" translatable="false">议题文件</string>
+
+  <string name="playbill_vertical" translatable="false">节\n目\n单</string>
+  <string name="related_file" translatable="false">相关文件</string>
+  <string name="topic_related_file" translatable="false">议题相关文件</string>
+
+  <string name="meeting_screen" translatable="false">会议室屏幕</string>
+  <string name="user_seat_screen" translatable="false">人员座位显示屏</string>
+  <string name="device_syncing_screen" translatable="false">%d 设备同屏中...</string>
+
+  <string name="select_all" translatable="false">全选</string>
+  <string name="confirm" translatable="false">确定</string>
+  <string name="cancel" translatable="false">取消</string>
+  <string name="do_not" translatable="false">不用了</string>
+  <string name="reset" translatable="false">重置</string>
+  <string name="retry" translatable="false">重试</string>
+  <string name="setting" translatable="false">设置</string>
+  <string name="back" translatable="false">返回</string>
+
+
+  <string name="end" translatable="false">结束</string>
+  <string name="hour" translatable="false">%d小时</string>
+  <string name="minute" translatable="false">%d分钟</string>
+  <string name="second" translatable="false">%d秒</string>
+
+  <string name="should_submit" translatable="false">应提交</string>
+  <string name="submitted" translatable="false">已提交</string>
+  <string name="not_submitted" translatable="false">未提交</string>
+
+  <string name="should_present_people_number" translatable="false">应到人数</string>
+  <string name="real_present_people_number" translatable="false">实到人数</string>
+  <string name="not_present_people_number" translatable="false">未到人数</string>
+
+  <string-array name="score_range">
+    <item>60以下</item>
+    <item>60–69</item>
+    <item>70–79</item>
+    <item>80–89</item>
+    <item>90–100</item>
+  </string-array>
+  
+  <string name="batch_operate" translatable="false">批量操作</string>
+  <string name="sign" translatable="false">签到</string>
+  <string name="confirm_sign" translatable="false">确认签到</string>
+  <string name="start_sign" translatable="false">开始签到</string>
+  <string name="end_sign" translatable="false">结束签到</string>
+  <string name="stop_sign" translatable="false">停止签到</string>
+  <string name="face_sign" translatable="false">人脸签到</string>
+  <string name="click_button_confirm_sign" translatable="false">点击按钮确认签到</string>
+  <string name="slide_view_confirm_sign" translatable="false">滑动滑块确认签到</string>
+  <string name="write_name_confirm_sign" translatable="false">手写输入姓名确认签到</string>
+  <string name="in_box_write_name" translatable="false">请在框内区域内手写签名</string>
+
+  <string name="replenish_sign" translatable="false">补报</string>
+  <string name="destroy_sign" translatable="false">销报</string>
+  <string name="call_service" translatable="false">呼叫服务</string>
+  <string name="confirm_publish" translatable="false">确定发布</string>
+
+  <string name="selected_person_signed" translatable="false">所选人员已签到</string>
+  <string name="selected_person_not_sign" translatable="false">所选人员未签到</string>
+  <string name="please_select_sign_person" translatable="false">请选择要补报的人员</string>
+  <string name="please_select_destroy_sign_person" translatable="false">请选择要销报的人员</string>
+
+  <string name="vote_success" translatable="false">表决成功</string>
+  <string name="sign_success" translatable="false">签到成功</string>
+  <string name="operate_success" translatable="false">操作成功</string>
+
+
+  <string name="current_topic" translatable="false">当前议题</string>
+  <string name="start_topic" translatable="false">开始议题</string>
+  <string name="confirm_end_current_topic" translatable="false">确定要结束当前议题？</string>
+  <string name="confirm_current_topic_finished" translatable="false">确保当前议题相关事项（ 讲解、表决等）已完成</string>
+  <string name="need_end_current_topic_start_next_topic" translatable="false">需要结束当前议题，才能开启下一个</string>
+
+
+  <string name="no_sign_and_no_sign_result" translatable="false">您还未发起签到，暂无签到结果显示</string>
+  <string name="empty_data" translatable="false">暂无数据</string>
+  <string name="empty_result" translatable="false">暂无结果</string>
+  <string name="no_relevant_results" translatable="false">无相关结果</string>
+  <string name="not_find_my_info" translatable="false">找不到我的信息?</string>
+  <string name="request_fail" translatable="false">请求接口失败</string>
+  <string name="check_network_or_server_not_connected" translatable="false">请检查网络或者未连接服务器</string>
+  <string name="connect_normal" translatable="false">连接正常</string>
+  <string name="connect_error" translatable="false">连接错误</string>
+  <string name="tcp_connect_error" translatable="false">TCP连接错误</string>
+  <string name="unknown_error" translatable="false">未知错误</string>
+  <string name="no_permissions" translatable="false">未获得相应权限</string>
+  <string name="need_permissions" translatable="false">应用需要获得浮窗/存储/相机权限</string>
+  <string name="not_open_file" translatable="false">暂不能打开此类文件</string>
+  <string name="file_not_exist" translatable="false">文件不存在</string>
+  <string name="file_downloading_wait" translatable="false">文件正在下载，请稍等一下</string>
+  <string name="a_file_downloading" translatable="false">%d个文件正在下载...</string>
+  <string name="no_install_wps" translatable="false">未安装WPS</string>
+
+  <string name="no_preset_sign_setting" translatable="false">未提前在PC端后台预设签到设置，请先设置相关数值！</string>
+
+  <string name="vote" translatable="false">表决</string>
+  <string name="review" translatable="false">评议</string>
+  <string name="score" translatable="false">评分</string>
+  <string name="select" translatable="false">选举</string>
+  <string name="ing" translatable="false">%s中</string>
+  <string name="x_score" translatable="false">%d分</string>
+  <string name="x_ticket" translatable="false">%d票</string>
+  <string name="x_rank" translatable="false">第%d名</string>
+
+  <string name="relaunch_sign" translatable="false">重新发起签到</string>
+  <string name="launch_sign" translatable="false">发起签到</string>
+  <string name="vote_item" translatable="false">表决（%d/%d）</string>
+  <string name="vote_item_no" translatable="false">表决项</string>
+  <string name="launch_vote" translatable="false">发起表决</string>
+  <string name="vote_soon_begin" translatable="false">表决投票，即将开始...</string>
+  <string name="stop_vote" translatable="false">停止表决</string>
+  <string name="partake_vote" translatable="false">参与表决</string>
+  <string name="topic_control" translatable="false">议题控制</string>
+  <string name="end_topic" translatable="false">结束议题</string>
+  <string name="see_vote_detail" translatable="false">查看表决详情</string>
+  <string name="please_stop_voting_first" translatable="false">请先停止表决</string>
+  <string name="single_vote" translatable="false">投票（单项选择）</string>
+  <string name="multiple_vote" translatable="false">投票（多项选择：%d选%d）</string>
+
+  <string name="prev" translatable="false">上一项</string>
+  <string name="next" translatable="false">下一项</string>
+  <string name="submit" translatable="false">提交</string>
+
+  <string name="pass" translatable="false">通过</string>
+  <string name="no_pass" translatable="false">不通过</string>
+
+  <string name="sign_mode" translatable="false">签到方式</string>
+  <string name="launch_ready_time" translatable="false">启动预备时间</string>
+  <string name="pass_rate" translatable="false">通过比率</string>
+  <string name="count_mode" translatable="false">计算方式</string>
+  <string name="voting_time_limit" translatable="false">表决时限</string>
+  <string name="statistic_result" translatable="false">统计结果</string>
+
+  <string name="meeting_time" translatable="false">会议时间：</string>
+  <string name="meeting_place" translatable="false">会议地点：</string>
+  <string name="meeting_content" translatable="false">会议内容：</string>
+
+  <string name="file_export" translatable="false">文件导出</string>
+  <string name="data_export" translatable="false">数据导出</string>
+  <string name="annotation_export" translatable="false">批注导出</string>
+
+  <string name="not_set" translatable="false">未设置</string>
+
+
+  <!-- 设置 -->
+  <string name="log" translatable="false">日志</string>
+  <string name="view_log" translatable="false">查看日志</string>
+  <string name="restart_app" translatable="false">重启应用</string>
+  <string name="native_system_setting" translatable="false">原生系统设置</string>
+
+  <string name="base_setting" translatable="false">基础设置</string>
+  <string name="develop_setting" translatable="false">开发设置</string>
+  <string name="component_setting" translatable="false">组件设置</string>
+
+  <string name="server_info" translatable="false">服务器信息</string>
+  <string name="server_ip" translatable="false">服务器IP</string>
+  <string name="http_port" translatable="false">HTTP端口</string>
+  <string name="tcp_port" translatable="false">TCP端口</string>
+  <string name="test_connect" translatable="false">测试连接</string>
+
+  <string name="device_register" translatable="false">设备注册</string>
+  <string name="device_code" translatable="false">设备码</string>
+
+  <string name="app_type" translatable="false">应用类型</string>
+  <string name="is_topic_controller" translatable="false">是否议题控制端</string>
+
+  <string name="face_detect" translatable="false">人脸识别</string>
+  <string name="activate" translatable="false">激活</string>
+  <string name="activated" translatable="false">已激活</string>
+  <string name="not_active" translatable="false">未激活</string>
+  <string name="activation_code" translatable="false">激活码</string>
+
+
+  <string name="sync_setting" translatable="false">同屏设置</string>
+  <string name="end_sync" translatable="false">结束同屏</string>
+
+  <string name="again_see" translatable="false">再看看</string>
+  <string name="see_more" translatable="false">查看更多</string>
+  <string name="join_meeting" translatable="false">加入会议</string>
+  <string name="meeting_not_begin" translatable="false">会议未开始</string>
+  <string name="meeting_code_or_room_invalid" translatable="false">会议码或会议室码无效</string>
+  <string name="meeting_info_invalid" translatable="false">无效会议信息</string>
+  <string name="query_no_meeting_info" translatable="false">查询不到会议信息</string>
+  <string name="query_no_meeting_room_info" translatable="false">查询不到会议室</string>
+  <string name="meeting_link_address_id" translatable="false">会议链接地址ID</string>
+  <string name="input_name_or_id" translatable="false">输入人名或ID号</string>
+
+  <string name="user_empty_unit_id" translatable="false">用户单元号为空</string>
+  <string name="find_user_tips" translatable="false">1、首先请确认是否有提前预约当前的会议。\n2、其次再确认输入的个人信息是否有误。\n3、如果上述两项均确认无误，请点击“呼叫服务”。</string>
+
+  <string name="device_no_camera" translatable="false">设备无摄像头</string>
+  <string name="face_sdk_activated" translatable="false">人脸识别SDK已激活</string>
+  <string name="face_sdk_active_fail" translatable="false">人脸识别SDK激活失败，错误码：%d</string>
+  <string name="face_init_fail" translatable="false">人脸识别引擎初始化失败，错误码：%d</string>
+
+  <string name="error_tips" translatable="false">很抱歉，加载失败了！</string>
+
+
+  <string name="late_night" translatable="false">深夜</string>
+  <string name="before_dawn" translatable="false">凌晨</string>
+  <string name="morning" translatable="false">早上</string>
+  <string name="forenoon" translatable="false">上午</string>
+  <string name="noon" translatable="false">中午</string>
+  <string name="afternoon" translatable="false">下午</string>
+  <string name="toward_evening" translatable="false">傍晚</string>
+  <string name="night" translatable="false">晚上</string>
+</resources>

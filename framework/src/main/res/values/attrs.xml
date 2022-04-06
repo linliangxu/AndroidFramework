@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:tools="http://schemas.android.com/tools">
+
+
+    <declare-styleable name="Widget">
+        <attr name="android:text"/>
+        <attr name="android:color"/>
+        <attr name="android:maxHeight" />
+    </declare-styleable>
+
+
+    <declare-styleable name="ShadowRelativeLayout">
+        <attr format="color" name="shadow_color"/>
+        <attr format="dimension" name="shadow_radius"/>
+        <attr format="dimension" name="shadow_blur"/>
+        <attr format="dimension" name="shadow_dx"/>
+        <attr format="dimension" name="shadow_dy"/>
+    </declare-styleable>
+
+
+
+    <declare-styleable name="LoadingProgressBarView">
+        <attr name="android:text"/>
+        <attr name="android:textSize"/>
+        <attr name="android:textColor"/>
+        <attr name="ffProgress" format="integer"/>
+        <attr name="ffMax" format="integer"/>
+        <attr name="ffStartAngle" format="integer"/>
+        <attr name="ffInverted" format="boolean"/>
+        <attr name="ffCounterclockwise" format="boolean"/>
+        <attr name="ffStrokeWidth" format="dimension"/>
+        <attr name="ffBackgroundColor" format="reference|color"/>
+        <attr name="ffProgressColor" format="reference|color"/>
+        <attr name="ffStrokeColor" format="reference|color"/>
+        <attr name="ffShowStroke" format="boolean"/>
+        <attr name="ffShowText" format="boolean"/>
+        <attr name="ffTypeface" format="string"/>
+        <attr name="ffImage" format="reference"/>
+        <attr name="ffProgressFillType" format="enum">
+            <enum name="radial" value="0"/>
+            <enum name="center" value="1"/>
+        </attr>
+    </declare-styleable>
+
+
+    <declare-styleable name="UpdateAppNumberProgressBar">
+        <attr name="progress_current" format="integer"/>
+        <attr name="progress_max" format="integer"/>
+
+        <attr name="progress_unreached_color" format="color"/>
+        <attr name="progress_reached_color" format="color"/>
+
+        <attr name="progress_reached_bar_height" format="dimension"/>
+        <attr name="progress_unreached_bar_height" format="dimension"/>
+
+        <attr name="progress_text_size" format="dimension"/>
+        <attr name="progress_text_color" format="color"/>
+
+        <attr name="progress_text_offset" format="dimension"/>
+
+        <attr name="progress_text_visibility" format="enum">
+            <enum name="visible" value="0"/>
+            <enum name="invisible" value="1"/>
+        </attr>
+    </declare-styleable>
+
+
+    <declare-styleable name="SwitchButton" tools:ignore="ResourceName">
+        <attr name="switchThumbDrawable" format="reference"/>
+        <attr name="switchThumbColor" format="color|reference"/>
+        <attr name="switchThumbMargin" format="dimension|reference"/>
+        <attr name="switchThumbMarginTop" format="dimension|reference"/>
+        <attr name="switchThumbMarginBottom" format="dimension|reference"/>
+        <attr name="switchThumbMarginLeft" format="dimension|reference"/>
+        <attr name="switchThumbMarginRight" format="dimension|reference"/>
+        <attr name="switchThumbWidth" format="dimension|reference"/>
+        <attr name="switchThumbHeight" format="dimension|reference"/>
+        <attr name="switchThumbRadius" format="dimension|reference"/>
+        <attr name="switchBackRadius" format="dimension|reference"/>
+        <attr name="switchBackDrawable" format="reference"/>
+        <attr name="switchBackColor" format="color|reference"/>
+        <attr name="switchFadeBack" format="boolean"/>
+        <attr name="switchThumbRangeRatio" format="float"/>
+        <attr name="switchAnimationDuration" format="integer"/>
+        <attr name="switchTintColor" format="color|reference"/>
+        <attr name="switchTextOn" format="string"/>
+        <attr name="switchTextOff" format="string"/>
+        <attr name="switchTextThumbInset" format="dimension"/>
+        <attr name="switchTextExtra" format="dimension"/>
+        <attr name="switchTextAdjust" format="dimension"/>
+    </declare-styleable>
+
+
+
+
+</resources>

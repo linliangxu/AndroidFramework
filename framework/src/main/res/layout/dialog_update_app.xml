@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+      android:layout_width="match_parent"
+      android:layout_height="match_parent"
+      android:gravity="center"
+      android:orientation="vertical">
+
+
+    <LinearLayout
+        android:id="@+id/ll_top"
+        android:layout_width="392dp"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:background="@drawable/round_gray_darkest_10dp"
+            android:orientation="vertical"
+            android:padding="30dp">
+
+            <TextView
+                android:id="@+id/tv_title"
+                android:layout_width="match_parent"
+                android:paddingTop="30dp"
+                android:gravity="center"
+                android:layout_height="wrap_content"
+                android:text="是否升级到4.1.1版本？"
+                android:textColor="@android:color/white"
+                android:textSize="24sp"/>
+
+            <TextView
+                android:visibility="gone"
+                android:id="@+id/tv_update_size"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="已在Wi-Fi下为您准备好新版本的安装包"
+                android:paddingTop="15dp"
+                android:textColor="#666"
+                android:textSize="14dp"/>
+
+            <ScrollView
+                android:visibility="gone"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:paddingBottom="20dp"
+                android:paddingTop="15dp"
+                android:scrollbars="none">
+
+                <TextView
+                    android:id="@+id/tv_update_info"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="1，xxxxxxxx\n2，ooooooooo"
+                    android:lineSpacingMultiplier="1.3"
+                    android:textColor="#666"
+                    android:textSize="14dp"/>
+            </ScrollView>
+
+
+            <TextView
+                android:id="@+id/btn_ok"
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:gravity="center"
+                android:text="@string/install"
+                android:layout_marginTop="38dp"
+                android:padding="0dp"
+                android:background="@drawable/round_white20"
+                android:textColor="@android:color/white"
+                android:textSize="20sp"/>
+
+            <TextView
+                android:id="@+id/tv_ignore"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="10dp"
+                android:text="忽略此版本"
+                android:textColor="#666"
+                android:textSize="14dp"
+                android:visibility="gone"/>
+            <com.gonsin.vote.base.util.update.view.NumberProgressBar
+              android:id="@+id/npb"
+              style="@style/UpdateAppNumberProgressBar"
+              android:layout_marginTop="38dp"
+              android:paddingBottom="20dp"
+              android:paddingTop="20dp"
+              android:visibility="gone"/>
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/ll_close"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:gravity="center_horizontal"
+            android:orientation="vertical">
+
+            <View
+                android:id="@+id/line"
+                android:layout_width="1dp"
+                android:layout_height="50dp"
+                android:background="#d8d8d8"
+                android:visibility="visible"/>
+
+            <ImageView
+                android:id="@+id/iv_close"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@mipmap/close_white_icon"
+                />
+
+
+        </LinearLayout>
+    </LinearLayout>
+
+
+</LinearLayout>

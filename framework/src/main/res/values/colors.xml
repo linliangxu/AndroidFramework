@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+  <color name="primary">#307CFF</color>
+  <color name="primary_dark">#FF6200EE</color>
+  <color name="accent">#FF3700B3</color>
+  <color name="teal_200">#FF03DAC5</color>
+  <color name="teal_700">#FF018786</color>
+  <color name="black">#FF000000</color>
+  <color name="black80">#CC000000</color>
+  <color name="black30">#4C000000</color>
+  <color name="white">#FFFFFFFF</color>
+  <color name="white20">#33FFFFFF</color>
+  <color name="white30">#4CFFFFFF</color>
+  <color name="white50">#80FFFFFF</color>
+  <color name="text_darker">#333333</color>
+  <color name="text_dark">#4D4D4D</color>
+  <color name="text">#666666</color>
+  <color name="text_light">#999999</color>
+  <color name="text_lightest">#cccccc</color>
+
+  <color name="top_bar_bg">#2D3447</color>
+  <color name="bg">#f6f6f6</color>
+
+  <color name="disable">#888888</color>
+
+  <color name="green">#26CA83</color>
+  <color name="green_lightest">#F4FCF9</color>
+  <color name="blue">#307CFF</color>
+  <color name="blue_light">#439AD4</color>
+  <color name="blue_lightest">#EBF2FF</color>
+  <color name="red">#C4261D</color>
+  <color name="red_light">#FF6160</color>
+  <color name="pink_light">#FFF7F7</color>
+  <color name="pink">#FF60FF</color>
+  <color name="brown">#BF8C00</color>
+  <color name="brown_lightest">#F9F4E6</color>
+  <color name="orange">#FF9237</color>
+  <color name="orange_lightest">#FFF9F5</color>
+  <color name="pink40">#66C4261D</color>
+  <color name="gray_darkest">#222222</color>
+  <color name="gray">#EEEEEE</color>
+  <color name="line_gray">#DDDDDD</color>
+
+
+  <color name="transparent_40">#40000000</color>
+  <drawable name="transparent">#00000000</drawable>
+
+
+
+  <color name="default_background_color">@android:color/transparent</color>
+  <color name="default_progress_color">#33b5e5</color>
+  <color name="default_stroke_color">#33b5e5</color>
+  <color name="default_text_color">#333333</color>
+</resources>
