@@ -14,20 +14,20 @@ import java.util.Set;
  * ==============================
  * @desc   : 基础全局类
  */
-public class Base {
+public class Frame {
 
-    public static final String TAG = "Base";
+    public static final String TAG = "Frame";
 
     //Base实例
-    private static Base INSTANCE = new Base();
+    private static Frame INSTANCE = new Frame();
     //程序的Context对象
     private Context mContext;
 
     /** 保证只有一个Base实例 */
-    private Base() {}
+    private Frame() {}
 
     /** 获取Base实例 ,单例模式 */
-    public static Base getInstance() {
+    public static Frame getInstance() {
         return INSTANCE;
     }
 

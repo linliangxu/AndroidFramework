@@ -8,25 +8,15 @@ import android.content.ClipboardManager;
 import android.content.Context;
 import android.content.Intent;
 import android.content.pm.ApplicationInfo;
-import android.graphics.Bitmap;
 import android.net.ConnectivityManager;
 import android.net.NetworkInfo;
-import android.net.Uri;
-import android.os.Build;
 import android.os.Handler;
-import android.provider.MediaStore;
 import android.text.TextUtils;
 import android.util.Log;
-import android.view.View;
 
-import androidx.core.content.FileProvider;
-
-import com.linliangxu.framework.base.Base;
+import com.linliangxu.framework.base.Frame;
 
 import java.io.BufferedReader;
-import java.io.File;
-import java.io.FileNotFoundException;
-import java.io.FileOutputStream;
 import java.io.FileReader;
 import java.io.IOException;
 import java.util.List;
@@ -42,7 +32,7 @@ public class SystemUtil {
      * 检查WIFI是否连接
      */
     public static boolean isWifiConnected() {
-        ConnectivityManager connectivityManager = (ConnectivityManager) Base.getContext().getApplicationContext().getSystemService(Context.CONNECTIVITY_SERVICE);
+        ConnectivityManager connectivityManager = (ConnectivityManager) Frame.getContext().getApplicationContext().getSystemService(Context.CONNECTIVITY_SERVICE);
         NetworkInfo wifiInfo = connectivityManager
                 .getNetworkInfo(ConnectivityManager.TYPE_WIFI);
         return wifiInfo != null;
@@ -51,7 +41,7 @@ public class SystemUtil {
      * 检查手机网络(4G/3G/2G)是否连接
      */
     public static boolean isMobileNetworkConnected() {
-        ConnectivityManager connectivityManager = (ConnectivityManager) Base.getContext().getApplicationContext().getSystemService(Context.CONNECTIVITY_SERVICE);
+        ConnectivityManager connectivityManager = (ConnectivityManager) Frame.getContext().getApplicationContext().getSystemService(Context.CONNECTIVITY_SERVICE);
         NetworkInfo mobileNetworkInfo = connectivityManager
                 .getNetworkInfo(ConnectivityManager.TYPE_MOBILE);
         return mobileNetworkInfo != null;
@@ -60,7 +50,7 @@ public class SystemUtil {
      * 检查是否有可用网络
      */
     public static boolean isNetworkConnected() {
-        ConnectivityManager connectivityManager = (ConnectivityManager) Base.getContext().getApplicationContext().getSystemService(Context.CONNECTIVITY_SERVICE);
+        ConnectivityManager connectivityManager = (ConnectivityManager) Frame.getContext().getApplicationContext().getSystemService(Context.CONNECTIVITY_SERVICE);
         return connectivityManager.getActiveNetworkInfo() != null;
     }
 
@@ -87,7 +77,7 @@ public class SystemUtil {
     }
 
     public static int dp2px(float dpValue) {
-        final float scale = Base.getContext().getResources().getDisplayMetrics().density;
+        final float scale = Frame.getContext().getResources().getDisplayMetrics().density;
         return (int) (dpValue * scale + 0.5f);
     }
 
@@ -100,7 +90,7 @@ public class SystemUtil {
     }
 
     public static int px2dp(float pxValue) {
-        final float scale = Base.getContext().getResources().getDisplayMetrics().density;
+        final float scale = Frame.getContext().getResources().getDisplayMetrics().density;
         return (int) (pxValue / scale + 0.5f);
     }
 
@@ -161,7 +151,7 @@ public class SystemUtil {
 
 
     public static boolean isBackground() {
-        Context context = Base.getContext();
+        Context context = Frame.getContext();
         ActivityManager activityManager = (ActivityManager) context
             .getSystemService(ACTIVITY_SERVICE);
         List<ActivityManager.RunningAppProcessInfo> appProcesses = activityManager
@@ -182,7 +172,7 @@ public class SystemUtil {
     }
 
     public static void moveToFront() {
-        Context context = Base.getContext();
+        Context context = Frame.getContext();
         /**获取ActivityManager*/
         ActivityManager activityManager = (ActivityManager) context.getSystemService(ACTIVITY_SERVICE);
 
@@ -202,7 +192,7 @@ public class SystemUtil {
      */
     public static boolean isDebug() {
         try {
-            ApplicationInfo info = Base.getContext().getApplicationInfo();
+            ApplicationInfo info = Frame.getContext().getApplicationInfo();
             return (info.flags & ApplicationInfo.FLAG_DEBUGGABLE) != 0;
         } catch (Exception e) {
             return false;

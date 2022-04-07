@@ -31,7 +31,7 @@ public abstract class RootActivity<T extends BasePresenter> extends BaseActivity
     protected void onViewCreated() {
         super.onViewCreated();
 
-        //viewMain = (ViewGroup) findViewById(R.id.view_main);
+        viewMain = (ViewGroup) findViewById(R.id.view_main);
         getCommonView().onViewCreated(viewMain);
 
     }

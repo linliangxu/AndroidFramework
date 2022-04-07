@@ -11,7 +11,7 @@ import android.widget.Toast;
 
 import com.google.android.material.snackbar.Snackbar;
 import com.linliangxu.framework.R;
-import com.linliangxu.framework.base.Base;
+import com.linliangxu.framework.base.Frame;
 
 
 /**
@@ -22,12 +22,12 @@ public class ToastUtil {
     static ToastUtil td;
 
     public static void show(int resId) {
-        show(Base.getString(resId));
+        show(Frame.getString(resId));
     }
 
     public static void show(String msg) {
         if (td == null) {
-            td = new ToastUtil(Base.getContext());
+            td = new ToastUtil(Frame.getContext());
         }
         td.setText(msg);
         td.create().show();

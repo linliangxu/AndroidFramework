@@ -5,7 +5,7 @@ import android.util.Log;
 
 import androidx.annotation.IntDef;
 
-import com.linliangxu.framework.base.Base;
+import com.linliangxu.framework.base.Frame;
 
 import org.json.JSONArray;
 import org.json.JSONException;
@@ -97,10 +97,10 @@ public final class LogUtil {
         public Builder() {
             if (defaultDir != null) return;
             if (Environment.MEDIA_MOUNTED.equals(Environment.getExternalStorageState())
-                    && Base.getContext().getExternalCacheDir() != null)
-                defaultDir = Base.getContext().getExternalCacheDir() + FILE_SEP + "log" + FILE_SEP;
+                    && Frame.getContext().getExternalCacheDir() != null)
+                defaultDir = Frame.getContext().getExternalCacheDir() + FILE_SEP + "log" + FILE_SEP;
             else {
-                defaultDir = Base.getContext().getCacheDir() + FILE_SEP + "log" + FILE_SEP;
+                defaultDir = Frame.getContext().getCacheDir() + FILE_SEP + "log" + FILE_SEP;
             }
         }
 

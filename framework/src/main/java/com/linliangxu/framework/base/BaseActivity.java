@@ -8,6 +8,7 @@ import androidx.appcompat.app.AppCompatDelegate;
 import com.linliangxu.framework.util.ToastUtil;
 
 import java.lang.reflect.ParameterizedType;
+import java.lang.reflect.Type;
 
 /**
  * Created by codeest on 2016/8/2.
@@ -27,8 +28,9 @@ public abstract class BaseActivity<T extends BasePresenter> extends SimpleActivi
         //if (mPresenter != null)
         //    mPresenter.attachView(this);
         //通过获得泛型类的父类，拿到泛型的接口类实例，通过反射来实例化 presenter
-        ParameterizedType type = (ParameterizedType) this.getClass().getGenericSuperclass();
-        mPresenter = getCommonView().createPresenter(type);
+        Type type = this.getClass().getGenericSuperclass();
+        if (type instanceof ParameterizedType)
+            mPresenter = getCommonView().createPresenter((ParameterizedType)type);
         getCommonView().bindPresenter();
     }
 

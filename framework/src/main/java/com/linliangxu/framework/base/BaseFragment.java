@@ -9,6 +9,7 @@ import androidx.annotation.Nullable;
 import com.linliangxu.framework.util.ToastUtil;
 
 import java.lang.reflect.ParameterizedType;
+import java.lang.reflect.Type;
 
 /**
  * Created by codeest on 2016/8/2.
@@ -25,8 +26,9 @@ public abstract class BaseFragment<T extends BasePresenter> extends SimpleFragme
         inject();
         //mPresenter.attachView(this);
         //通过获得泛型类的父类，拿到泛型的接口类实例，通过反射来实例化 presenter
-        ParameterizedType type = (ParameterizedType) this.getClass().getGenericSuperclass();
-        mPresenter = getCommonView().createPresenter(type);
+        Type type = this.getClass().getGenericSuperclass();
+        if (type instanceof ParameterizedType)
+            mPresenter = getCommonView().createPresenter((ParameterizedType)type);
         getCommonView().bindPresenter();
         super.onViewCreated(view, savedInstanceState);
     }
@@ -98,5 +100,5 @@ public abstract class BaseFragment<T extends BasePresenter> extends SimpleFragme
     @Override
     public void retry() {}
 
-    protected abstract void inject();
+    protected void inject() {}
 }

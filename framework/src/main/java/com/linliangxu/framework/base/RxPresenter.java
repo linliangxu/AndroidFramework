@@ -10,7 +10,6 @@ import java.lang.reflect.Proxy;
 
 import io.reactivex.disposables.CompositeDisposable;
 import io.reactivex.disposables.Disposable;
-import io.reactivex.functions.Consumer;
 
 /**
  * Created by codeest on 2016/8/2.
@@ -23,7 +22,7 @@ public class RxPresenter<T extends BaseView> implements BasePresenter<T> {
     protected CompositeDisposable mCompositeDisposable;
 
     public Context getContext() {
-        return mView == null && mView.getActivity() != null ? mView.getActivity() : Base.getContext();
+        return mView == null && mView.getActivity() != null ? mView.getActivity() : Frame.getContext();
     }
 
     protected void unSubscribe() {

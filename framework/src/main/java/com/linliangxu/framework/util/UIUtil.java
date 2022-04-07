@@ -2,7 +2,7 @@ package com.linliangxu.framework.util;
 
 import android.content.Context;
 
-import com.linliangxu.framework.base.Base;
+import com.linliangxu.framework.base.Frame;
 
 
 /**
@@ -12,7 +12,7 @@ import com.linliangxu.framework.base.Base;
 public final class UIUtil {
 
     public static int dip2px(double dpValue) {
-        return dip2px(Base.getContext(), dpValue);
+        return dip2px(Frame.getContext(), dpValue);
     }
 
     public static int dip2px(Context context, double dpValue) {

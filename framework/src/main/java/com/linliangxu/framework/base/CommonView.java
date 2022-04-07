@@ -65,10 +65,8 @@ public class CommonView implements View.OnClickListener {
 
     public void onViewCreated(ViewGroup main) {
         viewMain = main;
-        if (viewMain == null) {
-            throw new IllegalStateException(
-                "The subclass of RootActivity must contain a View named 'view_main'.");
-        }
+        if (viewMain == null) return;
+
         if (!(viewMain.getParent() instanceof ViewGroup)) {
             throw new IllegalStateException(
                 "view_main's ParentView should be a ViewGroup.");
@@ -141,7 +139,7 @@ public class CommonView implements View.OnClickListener {
     }
 
     public void error(String msg) {
-        if (currentState != STATE_LOADING) return;
+        if (viewMain == null || currentState != STATE_LOADING) return;
         if (!isErrorViewAdded) { isErrorViewAdded = true;
             View.inflate(mContext, mErrorResource, mParent);
             viewError = mParent.findViewById(R.id.view_error);
@@ -158,7 +156,7 @@ public class CommonView implements View.OnClickListener {
 
 
     public void empty(String msg) {
-        if (currentState == STATE_EMPTY) return;
+        if (viewMain == null || currentState == STATE_EMPTY) return;
         if (!isEmptyViewAdded) { isEmptyViewAdded = true;
             View.inflate(mContext, mEmptyResource, mParent);
             viewEmpty = mParent.findViewById(R.id.view_empty);
@@ -174,7 +172,7 @@ public class CommonView implements View.OnClickListener {
     }
 
     public void loading() {
-        if (currentState == STATE_LOADING)
+        if (viewMain == null || currentState == STATE_LOADING)
             return;
         hideCurrentView();
         currentState = STATE_LOADING;
@@ -184,7 +182,7 @@ public class CommonView implements View.OnClickListener {
 
 
     public void main() {
-        if (currentState == STATE_MAIN)
+        if (viewMain == null || currentState == STATE_MAIN)
             return;
         hideCurrentView();
         currentState = STATE_MAIN;

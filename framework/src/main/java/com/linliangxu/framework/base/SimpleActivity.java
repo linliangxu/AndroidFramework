@@ -26,7 +26,7 @@ public abstract class SimpleActivity extends SupportActivity {
         mUnBinder = ButterKnife.bind(this);
         mContext = this;
         onViewCreated();
-        Base.getInstance().addActivity(this);
+        Frame.getInstance().addActivity(this);
         initial();
     }
 
@@ -36,7 +36,7 @@ public abstract class SimpleActivity extends SupportActivity {
     @Override
     protected void onDestroy() {
         super.onDestroy();
-        Base.getInstance().removeActivity(this);
+        Frame.getInstance().removeActivity(this);
         mUnBinder.unbind();
     }
 

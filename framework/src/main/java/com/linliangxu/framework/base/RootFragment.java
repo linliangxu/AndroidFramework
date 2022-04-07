@@ -19,7 +19,7 @@ public abstract class RootFragment<T extends BasePresenter> extends BaseFragment
     protected void onViewCreated() {
         if (getView() == null)
             return;
-        //viewMain = (ViewGroup) getView().findViewById(R.id.view_main);
+        viewMain = (ViewGroup) getView().findViewById(R.id.view_main);
         getCommonView().onViewCreated(viewMain);
     }
 
