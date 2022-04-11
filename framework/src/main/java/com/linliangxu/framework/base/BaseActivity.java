@@ -80,6 +80,10 @@ public abstract class BaseActivity<T extends BasePresenter> extends SimpleActivi
         getCommonView().response();
     }
 
+    @Override
+    public int getRequestNumber() {
+        return getCommonView().getRequestNumber();
+    }
 
     protected CommonView getCommonView() {
         if (mCommonView == null)
