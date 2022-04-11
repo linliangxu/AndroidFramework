@@ -214,9 +214,10 @@ public class CommonView implements View.OnClickListener {
         this.mEmptyResource = emptyResource;
     }
 
-
+    private int requestNumber = 0;
 
     public void request() {
+        requestNumber ++;
         if (mLoadDialog == null) {
             mLoadDialog = new BaseDialog(mContext) {
                 @Override
@@ -231,10 +232,14 @@ public class CommonView implements View.OnClickListener {
     }
 
     public void response() {
-        if (mLoadDialog != null)
+        if (requestNumber > 0) requestNumber --;
+        if (mLoadDialog != null && requestNumber == 0)
             mLoadDialog.dismiss();
     }
 
+    public int getRequestNumber() {
+        return requestNumber;
+    }
 
     @Override
     public void onClick(View view) {

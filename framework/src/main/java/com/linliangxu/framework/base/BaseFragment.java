@@ -75,6 +75,11 @@ public abstract class BaseFragment<T extends BasePresenter> extends SimpleFragme
         getCommonView().response();
     }
 
+    @Override
+    public int getRequestNumber() {
+        return getCommonView().getRequestNumber();
+    }
+
 
     protected CommonView getCommonView() {
         if (mCommonView == null)
