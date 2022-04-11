@@ -22,7 +22,15 @@ public class RxPresenter<T extends BaseView> implements BasePresenter<T> {
     protected CompositeDisposable mCompositeDisposable;
 
     public Context getContext() {
-        return mView == null && mView.getActivity() != null ? mView.getActivity() : Frame.getContext();
+        return mView.getActivity() != null ? mView.getActivity() : Frame.getContext();
+    }
+
+    public final String getString(int resId) {
+        return getContext().getString(resId);
+    }
+
+    public final String getString(int resId, Object... formatArgs) {
+        return getContext().getString(resId, formatArgs);
     }
 
     protected void unSubscribe() {
