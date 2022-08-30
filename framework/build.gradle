@@ -75,8 +75,6 @@ dependencies {
 
     api 'com.liulishuo.filedownloader:library:1.7.7' //下载
 
-    implementation 'com.zhy:base-rvadapter:3.0.3'
-
     // apache 提供的文件处理工具
     api group: 'commons-io', name: 'commons-io', version: '2.6'
 

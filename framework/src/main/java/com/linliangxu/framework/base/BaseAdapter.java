@@ -6,9 +6,9 @@ import android.view.View;
 
 import androidx.recyclerview.widget.RecyclerView;
 
-import com.zhy.adapter.recyclerview.MultiItemTypeAdapter;
-import com.zhy.adapter.recyclerview.base.ItemViewDelegate;
-import com.zhy.adapter.recyclerview.base.ViewHolder;
+import com.llx.adapter.recyclerview.MultiItemTypeAdapter;
+import com.llx.adapter.recyclerview.base.ItemViewDelegate;
+import com.llx.adapter.recyclerview.base.ViewHolder;
 
 import java.util.List;
 
