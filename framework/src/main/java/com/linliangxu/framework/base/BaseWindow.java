@@ -50,6 +50,14 @@ public class BaseWindow extends Service implements GestureDetector.OnGestureList
         return rootView;
     }
 
+    public FrameLayout getFloatWindow() {
+        return mFloatWindow;
+    }
+
+    public WindowManager getWindowManager() {
+        return windowManager;
+    }
+
     public void setContentView(int res){
         setContentView(res, windowX, windowY,
             WindowManager.LayoutParams.MATCH_PARENT,
@@ -142,6 +150,10 @@ public class BaseWindow extends Service implements GestureDetector.OnGestureList
 
     public boolean isFullScreen() {
         return fullScreen;
+    }
+
+    public void updateWindowLayout(WindowManager.LayoutParams wmParams) {
+        windowManager.updateViewLayout(mFloatWindow, wmParams);
     }
 
     public void moveTo(int x, int y){
