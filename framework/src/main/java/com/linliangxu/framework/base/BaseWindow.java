@@ -17,6 +17,8 @@ import android.widget.FrameLayout;
 
 import com.linliangxu.framework.util.UIUtil;
 
+import java.lang.reflect.Field;
+
 public class BaseWindow extends Service implements GestureDetector.OnGestureListener, GestureDetector.OnDoubleTapListener, ScaleGestureDetector.OnScaleGestureListener {
 
 
@@ -155,6 +157,35 @@ public class BaseWindow extends Service implements GestureDetector.OnGestureList
     public void updateWindowLayout(WindowManager.LayoutParams wmParams) {
         windowManager.updateViewLayout(mFloatWindow, wmParams);
     }
+
+
+    /**
+     * 设置窗口无移动动画
+     */
+    public void setWindowNoMoveAnimation() {
+        String className = "android.view.WindowManager$LayoutParams";
+        try {
+            Class layoutParamsClass = Class.forName(className);
+
+            Field privateFlags = layoutParamsClass.getField("privateFlags");
+            Field noAnim = layoutParamsClass.getField("PRIVATE_FLAG_NO_MOVE_ANIMATION");
+
+            int privateFlagsValue = privateFlags.getInt(getWmParams());
+            int noAnimFlag = noAnim.getInt(getWmParams());
+            privateFlagsValue |= noAnimFlag;
+
+            privateFlags.setInt(getWmParams(), privateFlagsValue);
+
+            // Dynamically do stuff with this class
+            // List constructors, fields, methods, etc.
+
+        } catch (ClassNotFoundException e) {
+            // Class not found!
+        } catch (Exception e) {
+            // Unknown exception
+        }
+    }
+
 
     public void moveTo(int x, int y){
         if(wmParams != null){
