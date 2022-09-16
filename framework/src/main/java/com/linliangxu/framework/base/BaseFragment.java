@@ -12,14 +12,21 @@ import java.lang.reflect.ParameterizedType;
 import java.lang.reflect.Type;
 
 /**
- * Created by codeest on 2016/8/2.
- * MVP Fragment基类
+ * @author : Linxu
+ * @create : 2018/12/11
+ * 　　       ^__^
+ * 　　       (**)\ _ __ _
+ * 　　       (__)\       )\/\
+ * 　　        U  ||------|
+ * 　　           ||     ||
+ * ==============================
+ * @desc : MVP Fragment基类
  */
 public abstract class BaseFragment<T extends BasePresenter> extends SimpleFragment implements BaseView {
 
     protected T mPresenter;
 
-    private CommonView mCommonView;
+    private RootView mRootView;
 
     @Override
     public void onViewCreated(View view, @Nullable Bundle savedInstanceState) {
@@ -28,15 +35,15 @@ public abstract class BaseFragment<T extends BasePresenter> extends SimpleFragme
         //通过获得泛型类的父类，拿到泛型的接口类实例，通过反射来实例化 presenter
         Type type = this.getClass().getGenericSuperclass();
         if (type instanceof ParameterizedType)
-            mPresenter = getCommonView().createPresenter((ParameterizedType)type);
-        getCommonView().bindPresenter();
+            mPresenter = viewRoot().createPresenter((ParameterizedType)type);
+        viewRoot().bindPresenter();
         super.onViewCreated(view, savedInstanceState);
     }
 
     @Override
     public void onDestroyView() {
         if (mPresenter != null) mPresenter.detachView();
-        getCommonView().onDestroyView();
+        viewRoot().onDestroyView();
         super.onDestroyView();
     }
 
@@ -47,7 +54,7 @@ public abstract class BaseFragment<T extends BasePresenter> extends SimpleFragme
 
     @Override
     public void success(String msg) {
-        getCommonView().success(msg, getActivity());
+        viewRoot().success(msg, getActivity());
     }
 
     @Override
@@ -67,24 +74,23 @@ public abstract class BaseFragment<T extends BasePresenter> extends SimpleFragme
 
     @Override
     public void request() {
-        getCommonView().request();
+        viewRoot().request();
     }
 
     @Override
     public void response() {
-        getCommonView().response();
+        viewRoot().response();
     }
 
     @Override
     public int getRequestNumber() {
-        return getCommonView().getRequestNumber();
+        return viewRoot().getRequestNumber();
     }
 
-
-    protected CommonView getCommonView() {
-        if (mCommonView == null)
-            mCommonView = new CommonView(getActivity(), this);
-        return mCommonView;
+    protected RootView viewRoot() {
+        if (mRootView == null)
+            mRootView = new RootView(getActivity(), this);
+        return mRootView;
     }
 
     @Override

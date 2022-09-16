@@ -13,7 +13,15 @@ import com.llx.adapter.recyclerview.base.ViewHolder;
 import java.util.List;
 
 /**
- * Created by zhy on 16/4/9.
+ * @author : Linxu
+ * @create : 2018/12/11
+ * 　　       ^__^
+ * 　　       (**)\ _ __ _
+ * 　　       (__)\       )\/\
+ * 　　        U  ||------|
+ * 　　           ||     ||
+ * ==============================
+ * @desc : BaseAdapter
  */
 public abstract class BaseAdapter<T> extends MultiItemTypeAdapter<T>
 {

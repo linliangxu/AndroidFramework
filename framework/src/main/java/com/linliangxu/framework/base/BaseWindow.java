@@ -19,6 +19,13 @@ import com.linliangxu.framework.util.UIUtil;
 
 import java.lang.reflect.Field;
 
+
+/**
+ * @author : Linxu
+ * @create : 2021/11/7
+ * ==============================
+ * @desc   : 基础全局类
+ */
 public class BaseWindow extends Service implements GestureDetector.OnGestureListener, GestureDetector.OnDoubleTapListener, ScaleGestureDetector.OnScaleGestureListener {
 
 

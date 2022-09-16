@@ -3,8 +3,15 @@ package com.linliangxu.framework.base;
 import android.app.Activity;
 
 /**
- * Created by codeest on 2016/8/2.
- * View基类
+ * @author : Linxu
+ * @create : 2018/12/11
+ * 　　       ^__^
+ * 　　       (**)\ _ __ _
+ * 　　       (__)\       )\/\
+ * 　　        U  ||------|
+ * 　　           ||     ||
+ * ==============================
+ * @desc : View基类
  */
 public interface BaseView {
 

@@ -12,7 +12,15 @@ import android.view.WindowManager.LayoutParams;
 
 
 /**
- * @author vondear
+ * @author : Linxu
+ * @create : 2018/12/11
+ * 　　       ^__^
+ * 　　       (**)\ _ __ _
+ * 　　       (__)\       )\/\
+ * 　　        U  ||------|
+ * 　　           ||     ||
+ * ==============================
+ * @desc : BaseDialog
  */
 public abstract class BaseDialog extends Dialog {
 

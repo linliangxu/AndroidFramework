@@ -15,7 +15,19 @@ import java.lang.reflect.Type;
 import java.util.ArrayList;
 import java.util.List;
 
-public class CommonView implements View.OnClickListener {
+
+/**
+ * @author : Linxu
+ * @create : 2018/12/11
+ * 　　       ^__^
+ * 　　       (**)\ _ __ _
+ * 　　       (__)\       )\/\
+ * 　　        U  ||------|
+ * 　　           ||     ||
+ * ==============================
+ * @desc : activity和fragment共同的
+ */
+public class RootView implements View.OnClickListener {
 
     protected Context mContext;
 
@@ -34,6 +46,7 @@ public class CommonView implements View.OnClickListener {
 
     private int mErrorResource = R.layout.view_error;
     private int mEmptyResource = R.layout.view_empty;
+    private int mLoadingResource = R.layout.view_progress;
 
     private int currentState = STATE_LOADING;
     private boolean isErrorViewAdded = false;
@@ -43,7 +56,7 @@ public class CommonView implements View.OnClickListener {
 
     private List<BasePresenter> mInjectPresenters = new ArrayList<>();
 
-    public CommonView(Context context, BaseView view) {
+    public RootView(Context context, BaseView view) {
         this.mContext = context;
         mView = view;
     }
@@ -72,7 +85,7 @@ public class CommonView implements View.OnClickListener {
                 "view_main's ParentView should be a ViewGroup.");
         }
         mParent = (ViewGroup) viewMain.getParent();
-        View.inflate(mContext, R.layout.view_progress, mParent);
+        View.inflate(mContext, mLoadingResource, mParent);
         viewLoading = mParent.findViewById(R.id.view_loading);
         viewMain.setVisibility(View.GONE);
         currentState = STATE_LOADING;
@@ -164,7 +177,7 @@ public class CommonView implements View.OnClickListener {
                 "A View should be named 'view_error' in ErrorLayoutResource.");
             viewEmpty.setOnClickListener(this);
         }
-        if (msg != null) ((TextView) viewError.findViewById(R.id.empty_text)).setText(msg);
+        if (msg != null) ((TextView) viewEmpty.findViewById(R.id.empty_text)).setText(msg);
 
         hideCurrentView();
         currentState = STATE_EMPTY;
@@ -212,6 +225,10 @@ public class CommonView implements View.OnClickListener {
 
     public void setEmptyResource(int emptyResource) {
         this.mEmptyResource = emptyResource;
+    }
+
+    public void setLoadingResource(int loadingResource) {
+        this.mLoadingResource = loadingResource;
     }
 
     private int requestNumber = 0;

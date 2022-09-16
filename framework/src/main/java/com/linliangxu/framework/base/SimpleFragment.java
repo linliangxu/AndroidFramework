@@ -14,10 +14,16 @@ import butterknife.Unbinder;
 import me.yokeyword.fragmentation.SupportFragment;
 
 /**
- * Created by codeest on 16/8/11.
- * 无MVP的Fragment基类
+ * @author : Linxu
+ * @create : 2018/12/11
+ * 　　       ^__^
+ * 　　       (**)\ _ __ _
+ * 　　       (__)\       )\/\
+ * 　　        U  ||------|
+ * 　　           ||     ||
+ * ==============================
+ * @desc : 无MVP的Fragment基类
  */
-
 public abstract class SimpleFragment extends SupportFragment {
 
     protected View mView;

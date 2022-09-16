@@ -4,14 +4,14 @@ apply plugin: 'maven-publish'
 apply plugin: 'com.github.dcendents.android-maven'
 
 android {
-    compileSdkVersion 30
+    compileSdkVersion rootProject.android.compileSdkVersion
     buildToolsVersion "30.0.3"
 
     defaultConfig {
-        minSdkVersion 21
-        targetSdkVersion 30
+        minSdkVersion rootProject.android.minSdkVersion
+        targetSdkVersion rootProject.android.targetSdkVersion
         versionCode 1
-        versionName "1.0"
+        versionName rootProject.android.versionName
 
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
     }
@@ -94,7 +94,7 @@ afterEvaluate {
                 from components.release
                 groupId = 'com.gitee.linliangxu'
                 artifactId = 'android-framework'
-                version = '1.0'
+                version = rootProject.android.versionName
             }
         }
     }

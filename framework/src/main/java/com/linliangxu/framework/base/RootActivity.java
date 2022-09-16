@@ -6,11 +6,16 @@ import com.linliangxu.framework.R;
 
 
 /**
- * @author: Est <codeest.dev@gmail.com>
- * @date: 2017/4/21
- * @desciption:
+ * @author : Linxu
+ * @create : 2018/12/11
+ * 　　       ^__^
+ * 　　       (**)\ _ __ _
+ * 　　       (__)\       )\/\
+ * 　　        U  ||------|
+ * 　　           ||     ||
+ * ==============================
+ * @desc : RootActivity
  */
-
 public abstract class RootActivity<T extends BasePresenter> extends BaseActivity<T>{
 
     private static final int STATE_MAIN = 0x00;
@@ -32,13 +37,13 @@ public abstract class RootActivity<T extends BasePresenter> extends BaseActivity
         super.onViewCreated();
 
         viewMain = (ViewGroup) findViewById(R.id.view_main);
-        getCommonView().onViewCreated(viewMain);
+        viewRoot().onViewCreated(viewMain);
 
     }
 
     @Override
     public void error(String msg) {
-        getCommonView().error(msg);
+        viewRoot().error(msg);
     }
 
     @Override
@@ -48,7 +53,7 @@ public abstract class RootActivity<T extends BasePresenter> extends BaseActivity
 
     @Override
     public void empty(String msg) {
-        getCommonView().empty(msg);
+        viewRoot().empty(msg);
     }
 
     @Override
@@ -58,22 +63,27 @@ public abstract class RootActivity<T extends BasePresenter> extends BaseActivity
 
     @Override
     public void loading() {
-        getCommonView().loading();
+        viewRoot().loading();
     }
 
     @Override
     public void main() {
-        getCommonView().main();
+        viewRoot().main();
     }
 
 
     public void setErrorResource(int errorLayoutResource) {
-        getCommonView().setErrorResource(errorLayoutResource);
-//        this.mErrorResource = errorLayoutResource;
+        viewRoot().setErrorResource(errorLayoutResource);
+        //this.mErrorResource = errorLayoutResource;
     }
 
     public void setEmptyResource(int emptyResource) {
-        getCommonView().setEmptyResource(emptyResource);
-//        this.mEmptyResource = emptyResource;
+        viewRoot().setEmptyResource(emptyResource);
+        //this.mEmptyResource = emptyResource;
+    }
+
+    public void setLoadingResource(int loadingResource) {
+        viewRoot().setLoadingResource(loadingResource);
+        //this.mEmptyResource = emptyResource;
     }
 }

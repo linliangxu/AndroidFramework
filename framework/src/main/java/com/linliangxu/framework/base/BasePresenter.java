@@ -1,8 +1,15 @@
 package com.linliangxu.framework.base;
 
 /**
- * Created by codeest on 2016/8/2.
- * Presenter基类
+ * @author : Linxu
+ * @create : 2018/12/11
+ * 　　       ^__^
+ * 　　       (**)\ _ __ _
+ * 　　       (__)\       )\/\
+ * 　　        U  ||------|
+ * 　　           ||     ||
+ * ==============================
+ * @desc : Presenter基类
  */
 public interface BasePresenter<T extends BaseView>{
 

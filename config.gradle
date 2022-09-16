@@ -1,22 +1,18 @@
-def APP_VERSION_NAME = "1.0.0.S07.22"
-def SCREEN_VERSION_NAME = "1.0.0.S07.21"
-
+def PLUGIN_VERSION_NAME = "1.1.0"
 
 ext {
 
 
     android = [
-            appName           : "GonsinVote",
-            screenName           : "GonsinVoteScreen",
+            appName           : "Framework",
 
             compileSdkVersion : 30,
             buildToolsVersion : '30.0.3',
-            applicationId     : "com.gonsin.pad.voting.app",
+            applicationId     : "com.linliangxu.framework",
             minSdkVersion     : 21,
             targetSdkVersion  : 30,
             versionCode       : 1,
-            versionName       : APP_VERSION_NAME,
-            versionNameScreen   : SCREEN_VERSION_NAME
+            versionName       : PLUGIN_VERSION_NAME
     ]
 
     version = [

@@ -10,10 +10,16 @@ import butterknife.Unbinder;
 import me.yokeyword.fragmentation.SupportActivity;
 
 /**
- * Created by codeest on 16/8/11.
- * 无MVP的activity基类
+ * @author : Linxu
+ * @create : 2018/12/11
+ * 　　       ^__^
+ * 　　       (**)\ _ __ _
+ * 　　       (__)\       )\/\
+ * 　　        U  ||------|
+ * 　　           ||     ||
+ * ==============================
+ * @desc : 无MVP的activity基类
  */
-
 public abstract class SimpleActivity extends SupportActivity {
 
     protected Activity mContext;
