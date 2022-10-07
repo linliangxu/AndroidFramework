@@ -239,7 +239,7 @@ public class RootView implements View.OnClickListener {
             mLoadDialog = new BaseDialog(mContext) {
                 @Override
                 protected int getLayout() {
-                    return R.layout.view_progress;
+                    return mLoadingResource;
                 }
             };
             mLoadDialog.setCanceledOnTouchOutside(false);

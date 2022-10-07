@@ -68,6 +68,7 @@ public class RxPresenter<T extends BaseView> implements BasePresenter<T> {
             }
         });
 
+        onCreate();
     }
 
     @Override
@@ -75,5 +76,15 @@ public class RxPresenter<T extends BaseView> implements BasePresenter<T> {
         mReferenceView.clear();
         mReferenceView = null;
         unSubscribe();
+
+        onDestroy();
     }
+
+    protected T viewGet() {
+        return mReferenceView != null ? mReferenceView.get() : null;
+    }
+
+    protected void onCreate() {}
+    protected void onDestroy() {}
+
 }

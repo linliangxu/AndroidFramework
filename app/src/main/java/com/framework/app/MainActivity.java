@@ -2,10 +2,12 @@ package com.framework.app;
 
 import android.os.Bundle;
 
+import com.framework.app.contract.MainContract;
+import com.framework.app.presenter.MainPresenter;
 import com.linliangxu.framework.R;
 import com.linliangxu.framework.base.RootActivity;
 
-public class MainActivity extends RootActivity {
+public class MainActivity extends RootActivity<MainPresenter> implements MainContract.View {
 
     @Override
     protected void inject() {
@@ -21,5 +23,7 @@ public class MainActivity extends RootActivity {
     @Override
     protected void initial() {
         empty("空数据了");
+
+        request();
     }
 }
