@@ -17,7 +17,7 @@ import com.linliangxu.framework.base.BaseView;
 public interface MainContract {
 
     interface View extends BaseView {
-
+        void show();
     }
 
     interface Presenter extends BasePresenter<View> {

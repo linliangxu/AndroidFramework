@@ -31,13 +31,20 @@ public abstract class BaseFragment<T extends BasePresenter> extends SimpleFragme
     @Override
     public void onViewCreated(View view, @Nullable Bundle savedInstanceState) {
         inject();
+
+        super.onViewCreated(view, savedInstanceState);
+    }
+
+    @Override
+    protected void onViewCreated() {
+        super.onViewCreated();
+
         //mPresenter.attachView(this);
         //通过获得泛型类的父类，拿到泛型的接口类实例，通过反射来实例化 presenter
         Type type = this.getClass().getGenericSuperclass();
         if (type instanceof ParameterizedType)
             mPresenter = viewRoot().createPresenter((ParameterizedType)type);
         viewRoot().bindPresenter();
-        super.onViewCreated(view, savedInstanceState);
     }
 
     @Override

@@ -27,5 +27,7 @@ public class MainPresenter extends RxPresenter<MainContract.View> implements Mai
 
 
         LogUtil.e(viewGet() instanceof Activity);
+
+        mView.show();
     }
 }

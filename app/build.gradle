@@ -7,7 +7,7 @@ android {
     buildToolsVersion "30.0.3"
 
     defaultConfig {
-        applicationId "com.linliangxu.framework"
+        applicationId "com.framework.app"
         minSdkVersion 21
         targetSdkVersion 30
         versionCode 1
@@ -38,4 +38,6 @@ dependencies {
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.3.0'
 
     implementation project(':framework')
+
+    annotationProcessor "com.jakewharton:butterknife-compiler:8.2.1"
 }
